@@ -1,0 +1,491 @@
+﻿/* Arquivo css do site */
+
+/*.back_cad {
+    background: #000000d5;
+}*/
+
+#CADASTRAR{
+    text-align: center
+}
+#f12{
+    text-align: left;
+    right: 30px;
+    bottom: 10%;
+    font-family: 'Times New Roman', Times, serif;   
+    color: #df0808;
+    font-size: 16px;    
+}
+#TERMOS_COND{
+    color: black;
+
+}
+#TAC{
+    position: absolute;
+    top: 117px;
+    color: black;
+    left: 08px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+#area_member{
+      position: relative;
+      bottom: 50%;
+      left: -22px;
+      text-align: center;
+      font-family: serif;
+}
+#campo_login{
+    position: absolute;
+    right: 10px;
+}
+#entrar{
+    position: absolute;
+    top: 200px;
+    font-size: 50px;
+    left: 0px;
+}
+#cadastrar{
+    position: absolute;
+    top: 200px;
+    left: 80px;
+    text-align: center;
+}
+
+#jscadastrar{
+    width:109px; 
+    height: 28px; 
+    font-size: 15px; 
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+#rec_novidades{
+    bottom: 20px;
+    color: black;
+}
+#imgareamember{
+    position: absolute;
+    left: 31%;
+    top: 5%;
+    color: #df0808;
+}
+#rodape{
+    bottom: -650px; 
+    position: absolute;
+    color: #df0808;
+}
+
+
+/*//-----------------------------------------Dashboard de cursos-----------------------------------------------*/
+
+
+/*--------------//-------------CAIXA DO CURSO-----------------------//-----------------------------------------*/
+#posicao{
+    position: absolute;
+    left: 2px;
+}
+
+#tabela1{
+    width: 199px;
+    height: 227px;
+    background: #03ad45;
+    left: 2px;
+}
+#quadtab1{
+    width: 199px;
+    height: 201px;
+    background: #03ad45;
+    position: absolute;
+    top: 227px;
+    left: 0px;
+}
+#cabtab1{
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    padding: 5 5 5 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    height: 40px;
+    border-top: #03ad45;
+    border-left: 2px;
+    border-right: 2px;
+    border-top: 2px;
+    border-color:#03ad45;
+    border-style: solid;
+}
+#corpotab1{
+    padding: 1 10 10 10px;
+    background-color: #ff0808;
+    background: #424040;
+    margin-right: 3px;
+    margin-left: 3px;
+    height:183px;
+    position: absolute;
+    top: 42px;
+    width: 194px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-align: center; 
+}
+#textcorpotab1{
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    left: 40px;
+    
+}
+/*----------------//--------------------MENU SUSPENSO--------------------------------//-----------------------*/
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: 194px;
+    left: 11px;
+    position: absolute;
+}
+ul li{
+    position: relative;
+}
+li ul{
+    position: absolute;
+    left: 194px;
+    top: 0px;
+    display: none;
+}
+ul li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    /*background: rgb(243, 243, 243);*/
+    background: linear-gradient(180deg, #f1f1f1, hsl(0, 3%, 87%));
+    padding: 10px;
+    border: 1px solid white;
+    border-color: rgb(151, 151, 151);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+
+}
+li:hover ul { display: block; }
+#nav{
+    position: absolute;
+    bottom: 149 px;
+    left: 3px;
+    z-index: 1;
+}
+ul li a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    background: linear-gradient(180deg, #cfcfcf, hsl(0, 0%, 50%));
+}
+/*---------------------//-----------------Home do Curso----------------------------//----------------------------*/
+#inicio_curso{
+    position: absolute;
+    top: 8px;
+    width: 1062px;
+    height: 226px;
+    background: #e3e3e4;
+    left: 201px;
+}
+#areaestudo{
+    position: absolute;
+    top: 234px;
+    width: 1062px;
+    height: 244px;
+    background: #f1f3f2;
+    left: 201px;
+}
+#areadeestudo2{
+    position: absolute;
+    top: 437px;
+    width: 1262px;
+    height: 800px;
+    background: #f1f3f2;
+    left: 1px;
+}
+#meucurso{
+    position: absolute;
+    top: 0px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 3px;
+    font-size: 15px;
+}
+#echocurso{
+    position: absolute;
+    top: 21px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 3px;
+    font-size: 15px;
+}
+/*--------------//-------------CAIXA DO CURSO-----------------------//-----------------------------------------*/
+#progressao{
+    position: absolute;
+    left: 10px;
+    top: 117px;
+    width: 100px;
+    margin: 4px 0;
+    display: inline-block;
+}
+/*---------------------------------------------------MAPA CURSO-------------------------------------------*/
+#mapacurso{
+    bottom: 1px;
+    position: absolute;
+    color: rgb(83, 82, 82);
+    left: 11px;
+    font-size: 19px;
+    word-spacing: 4px;
+    color: black;
+}
+#mapacurso2{
+    bottom: 1px;
+    position: absolute;
+    color:rgb(83, 82, 82);
+    left: 11PX;
+    font-size: 19px;
+    word-spacing: 4px;
+    color: black;
+    text-decoration: none;
+}
+#vetorlivro{
+    position: absolute;
+    right: 20px;
+    top: 165px;
+}
+/*----------------------------------------------BOX SELEÇÃO DO CURSO--------------------------------------*/
+#caixacurso{
+    background: linear-gradient(180deg, #9fc4f5, hsl(214, 86%, 42%));
+    position: absolute;
+    left: 50px;
+    top: 270px;
+    width: 250px;
+    height: 50px;
+}
+#caixacurso:hover{
+    background: linear-gradient(180deg, #74c1ee, #026d97, #022738);
+    width: 255px;
+    height: 55px;
+    top: 268px;
+}
+#textcaixacursoinicial li{
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    font-variant: normal;
+    font-style: oblique;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    text-decoration: none; 
+    position: absolute;
+    left: 8%;
+    top: 32%; 
+}
+#textcaixacursoinicial li a{
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    font-variant: normal;
+    font-style: oblique;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    text-decoration: none;  
+}
+
+.caixacursopdf{
+    background: #bdbdc0;
+    position: absolute;
+    left: 50px;
+    top: 270px;
+    width: 190px;
+    height: 160px;
+    border: 1px solid #0f0101;
+}
+.incaixacursopdf{
+    background: #3d3d3d;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 190px;
+    height: 24px;  
+    border-bottom-width: 1px;
+    /*border-bottom-color: #070127;*/
+    border-bottom-style: solid;
+}
+#imgpdf{
+    left: 23px;
+    top: 44px;
+    position: absolute;
+}
+#textcaixacurso{
+    color: white;
+    font-weight: bolder;
+    top: -30px;
+    position: absolute;
+    left: 65px;
+    font-size: 22px;
+}
+#imgvideo{
+    position: absolute;
+    left: -8px;
+    top: 23px;
+}
+#imgaudio{
+    position: absolute;
+    left: 44px;
+    top: 41px;
+}
+/*--------------//-----------//---------------SELECT CURSO-----------------//-------------------------//---------*/
+#nomecursovideo{
+    position: absolute;
+    background: #726f6f;
+    border: 1px solid #1a1919;
+    width: 1316px;
+    height: 70px;
+    left: 4px;
+    top: 10px;
+}
+#textnomecursovideo{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    left: 487px;
+    top: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder 900;
+    font-size: 20px;
+}
+#videocurso{
+    position: absolute;
+    top: 70px;
+    left: 270px;
+}
+#boxautentic{
+    position: absolute;
+    background: rgba(90, 89, 89, 0.822);
+    border-color: #424040ea;
+    width: 230px;
+    height: 90px;
+    left: 5px;
+    top: 100px;
+}
+/*--------------//-----------//---------------SELECT AUDIO-----------------//-------------------------//---------*/
+#nomecursoaudio{
+    position: absolute;
+    background: #726f6f;
+    border: 1px solid #1a1919;
+    width: 1316px;
+    height: 70px;
+    left: 4px;
+    top: 10px;
+}
+#textnomecursoaudio{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    left: 487px;
+    top: -5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder 900;
+    font-size: 20px;
+}
+#subtitleaudiodicas{
+    position: absolute;
+    color: white;
+    left: 580px;
+    top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder 700;
+    font-size: 14px;
+}
+#audiodicacurso{
+    position: absolute;
+    left: 30px;
+    top: 100px;
+    
+}
+/*---------------------------------------------------MEU CURSO-------------------------------------------*/
+#meucurso_pdf{
+    background: #312f2f;
+    width: 170px;
+    height: 180px;
+    position: absolute;
+    left: 100px;
+    top: 269px;
+}
+#textmeucurso_pdf{
+    background: rgb(148, 147, 147);
+    width: 170px;
+    height: 20px;
+    position: absolute;
+    top: 180px;
+}
+#imgmeucurso_pdf{
+    top: 300px;
+    left: 300px;
+    width: 150px;
+    left: 100px;
+}
+#meucurso_video{
+    background: #312f2f;
+    width: 170px;
+    height: 180px;
+    position: absolute;
+    left: 380px;
+    top: 269px;
+}
+#textmeucurso_video{
+    background: rgb(148, 147, 147);
+    width: 170px;
+    height: 20px;
+    position: absolute;
+    top: 180px;
+}
+#meucurso_audio{
+    background: #312f2f;
+    width: 170px;
+    height: 180px;
+    position: absolute;
+    left: 660px;
+    top: 269px;
+}
+#textmeucurso_audio{
+    background: rgb(148, 147, 147);
+    width: 170px;
+    height: 20px;
+    position: absolute;
+    top: 180px;
+}
+/*------------------------------------------------MEUS DADOS-------------------------------------------*/
+#inicio_curso_dados{
+    position: absolute;
+    top: 8px;
+    width: 1062px;
+    height: 120px;
+    background: #e3e3e4;
+    left: 201px;
+}
+#meucurso_dados{
+    position: absolute;
+    top: -10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 10px;
+    font-size: 15px;
+}
+#MeusDados_Gerais{
+    position: absolute;
+    top: 160px;
+    color: black;
+    left: 50px;
+    z-index: 5;
+    width: 1010px;
+    height: 400px;
+    background-color: rgb(192, 192, 192);
+}

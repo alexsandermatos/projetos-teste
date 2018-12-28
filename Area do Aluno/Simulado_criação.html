@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+    <meta name="googlebot" content="noarchive">
+    <meta http-equiv="imagetoolbar" content="no">
+    <title>Simulado</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/estilos.css">
+    <script type="text/javascript"></script>   
+    <style type="text/css">
+    body{
+        background: #333232;
+        /*background: white;*/
+    }
+    </style> 
+</HEAD>
+<body>
+
+
+<h1>SIMULADO</h1>
+
+    
+<!--DEFINE AS FONTES USADA NAS PERGUNTAS E RESPOSTAS-->
+<style type=text/css>
+
+#center{
+    font-family:arial;
+    font-size:8pt;
+    color:#696969;
+}
+#pergunta{
+    background-color:#fefefe;
+    font-family:arial;
+    font-size:8pt;
+    color:#696969;
+}
+#resposta{
+    background-color:#fefefe;
+    font-family:arial;
+    font-size:8pt;
+    color:#696969;
+}
+#input{
+    border:1px solid #cccccc;
+    background-color:#fefefe;
+    font-family:arial;
+    font-size:8pt;
+    color:#696969;
+}
+#normal{
+    font-family:arial;
+    font-size:8pt;
+    color:#696969;
+    text-decoration:none;
+}
+input{
+    font-family:arial;
+    font-size:8pt;
+    color:#1c1c1c;
+}
+</style>
+
+<script language="JavaScript"> 
+/* início do código  */
+
+var pontos=0; 
+function reponse(form) { 
+for (var i=0;i<form.length;i++){ 
+ if (form[i].checked){ 
+  break 
+ } 
+} 
+var answer="" 
+if (i<form.length){ 
+ answer = form[i].value 
+} 
+return answer; 
+} 
+
+function solution(form) { 
+/* variável para cada pergunta */
+var points=0;var rep="";var comment="";var resposta1="";var resposta2="";var resposta3="";var onome=""
+
+/* valor de pontos para as questões */
+if (reponse(form.question1)=="A") {pontos+=1} 
+if (reponse(form.question2)=="B") {pontos+=1} 
+if (reponse(form.question3)=="B") {pontos+=1} 
+
+/* cada mensagem vai de acordo com o input marcado para resposta */
+
+/* mensagem para questão 1 */
+if (reponse(form.question1)=="") {resposta1="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question1)=="A") {resposta1="<font color=#0099cc>correta</font>"} 
+if (reponse(form.question1)=="B") {resposta1="<font color=#cccccc>incorreta</font>"}
+if (reponse(form.question1)=="C") {resposta1="<font color=#cccccc>incorreta</font>"}
+
+/* mensagem para questão 2 */
+if (reponse(form.question2)=="") {resposta2="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question2)=="A") {resposta2="<font color=#cccccc>incorreta</font>"} 
+if (reponse(form.question2)=="B") {resposta2="<font color=#0099cc>correta</font>"}
+if (reponse(form.question2)=="C") {resposta2="<font color=#cccccc>incorreta</font>"}
+
+/* mensagem para questão 3 */
+if (reponse(form.question3)=="") {resposta3="<font color=#cccccc>não respondida</font>"} 
+if (reponse(form.question3)=="A") {resposta3="<font color=#cccccc>incorreta</font>"} 
+if (reponse(form.question3)=="B") {resposta3="<font color=#0099cc>correta</font>"}
+if (reponse(form.question3)=="C") {resposta3="<font color=#cccccc>incorreta</font>"}
+
+/* aqui é exibido a mensagem de acordo com o ponto marcado */
+if (pontos==0) {comment="você não fez pontos, tente novamente"}
+if (pontos==1) {comment="você fez um ponto, continue assim"}
+if (pontos==2) {comment="você fez 2 pontos, está quase lá"}
+if (pontos==3) {comment="excelente! você acertou todas!<br><br><a href=\"javascript:;\" onClick=\"window.print();return false\">Imprimir este certificado</a><br>Veja o seu certificado abaixo:<br><br><img src=img_certificado.gif border=0>"}
+
+/* aqui exibo a porcentagem de acordo com o ponto  */
+if (pontos==0) {porcentagem="0%"}
+if (pontos==1) {porcentagem="33%"}
+if (pontos==2) {porcentagem="66%"}
+if (pontos==3) {porcentagem="100%"}
+
+/* aqui inicio o código mostrado na nova janela */
+chaine='' 
++'<head><title>Resultado</title>'
++'<style type=text/css>a{font-family:arial;font-size:8pt;color:#696969;text-decoration:none;}#texto{font-family:verdana,arial;font-size:8pt;color:#696969;}#textos{font-family:verdana,arial;font-size:10px;color:#c7c7c7;}input{border:1px solid #f8f8f8;background-color:fefefe;font-family:arial;font-size:8pt;color:#1c1c1c;}#resultado{font-family:arial;font-size:8pt;color:#696969;}</style>'
++'</head>'
++'<center><font id=texto>Você atingiu um total de <font color=#0099cc><b>'+ pontos +'</b></font> pontos, acertando '+ porcentagem +' das questões.<br><br><font color=#696969>'+comment+'<BR>' 
+
++'<br><center><font id=texto>'+ formmail.onome.value +' veja abaixo o resumo das questões:</font></center><br>'
+
++'<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#ffffff;" width="150">'
++"<tr><td><font id=textos>1)</td><td><font id=resultado>"+ resposta1 +"</font></td></tr>"
++"<tr><td><font id=textos>2)</td><td><font id=resultado>"+ resposta2 +"</font></td></tr>"
++"<tr><td><font id=textos>3)</td><td><font id=resultado>"+ resposta3 +"</font></td></tr>"
++"</table></form>"
++'<a href="javascript:void(0)" onclick="javascript:window.close()">FECHAR</a>'
++'</CENTER></BODY></HTML>' 
+solu=open(); 
+solu.document.write(chaine) 
+} 
+
+</script> 
+
+<title>Simulado</title> 
+<script>
+function vai() {
+location.reload()
+}
+</script>
+
+<!--ABAIXO SEGUE O FORMULÁRIO-->
+<form name="Simulado">
+<center><div id=center>Responda as perguntas abaixo</div></center>
+<br>
+<center><div id=normal>cada questão vale 1 ponto</div></center>
+<center><a href=# onClick="vai()"><div id=normal>[ Clique aqui para fazer Novamente ]</div></a></center>
+<center><div id=normal>[ marque somente uma questão por pergunta ]</div></center>
+<div text-align=center> 
+<table border=0 cellpading=3 cellspacing=3 style="border:1px solid #f8f8f8;background-color:#ffffff;" width=400>
+<tr><td>
+<div id=pergunta> 
+Coloque ao lado o seu Nome:&nbsp;</div><input type="text" name="onome" value="" size=44 id=input><font color=#0099cc face=verdana size=1><b>&nbsp;*</b><br>
+<div id=pergunta> 
+1 - Que número é este [1]?</div>
+<br><div id=resposta> 
+<div id=pergunta>(A)</div><input TYPE="checkbox" NAME="question1" VALUE="A"><div id=resposta>Um<br>
+<div id=pergunta>(B)</div><input TYPE="checkbox" NAME="question1" VALUE="B"><div id=resposta>Dois<br>
+<div id=pergunta>(C)</div><input TYPE="checkbox" NAME="question1" VALUE="C"><div id=resposta>Três<br>
+<br>
+<div id=pergunta> 
+2 - Que número é este [6]?</div>
+<br> 
+<div id=pergunta>(A)</div><input TYPE="checkbox" NAME="question2" VALUE="A"><div id=resposta>Cinco<br>
+<div id=pergunta>(B)</div><input TYPE="checkbox" NAME="question2" VALUE="B"><div id=resposta>Seis<br>
+<div id=pergunta>(C)</div><input TYPE="checkbox" NAME="question2" VALUE="C"><div id=resposta>Sete<br>
+<br>
+<div id=pergunta> 
+3 - Que letra é esta [c]?</div>
+<br> 
+<div id=pergunta>(A)</div><input TYPE="checkbox" NAME="question3" VALUE="A"><div id=resposta>b<br>
+<div id=pergunta>(B)</div><input TYPE="checkbox" NAME="question3" VALUE="B"><div id=resposta>c<br>
+<div id=pergunta>(C)</div><input TYPE="checkbox" NAME="question3" VALUE="C"><div id=resposta>d<br>
+<br>
+<center>
+<input TYPE="button" NAME="valide" VALUE="Resultado" onclick="javascript:solution(this.form);" style="border:1px solid #f8f8f8;background-color:#ffffff;color:#696969;"> 
+</center></td></form></tr>
+</table> 
+<center><a href=# onClick="vai()"><div id=normal>[ Clique aqui para fazer Novamente ]</div></a></center>
+
+
+
+</body>
+</HTML>
