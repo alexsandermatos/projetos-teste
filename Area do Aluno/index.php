@@ -14,20 +14,6 @@
       </head>
 
       <body>
-          <?php
-          session_start();
-            //echo session_start();
-            //echo session_create_id();
-            echo "<br>";
-            echo session_id();
-            echo "<br>";
-            echo session_status();
-            session_destroy();
-            echo "<br>";
-            session_abort();
-            //  session_register();
-            //session_destroy();
-          ?>
 
       <!--  <div id="imgareamember">
     <img src="imagens/Logomarca IRC2-2.png" alt="Instituto Rafael Caique" title="Instituto Rafael Caique" width="360px"height="260px">
@@ -67,16 +53,19 @@
                     left: 67px;
                 }
                 </style>
+     <form method="POST" action="indexopen.php" id="validaform" name="validaforma">
+
             <td>Login
-            <input type="text" name="Login" id="Login" required="required"></td>
+            <input type="text" name="LOGIN1" id="LOGIN1" required="required"></td>
         </tr>
         <tr>
             </tr>
             <tr>
             </tr>
+                
         <tr>
             <td>Senha
-            <input type="password" name="Senha" id="Senha" required="required"></td>
+            <input type="password" name="SENHA" id="Senha" required="required"></td>
         </tr>
         <tr>
         </tr>
@@ -93,12 +82,14 @@
             location.href="cadastro.html"
         }
       </script>
+      <!--
       <script type="text/javascript">
           function dashboard_curso()
           {
               location.href="dashboard_curso.html"
           }
           </script>
+        -->
       <tr>
       </tr>
       <tr>
@@ -107,7 +98,7 @@
             </tr>
       <tr>
           <td> <div id="entrar">
-            <input type="submit" value="Entrar" id="Entrar" name="Entrar" onclick="dashboard_curso()" style="width: 69px; height: 30px; font-size: 15px">
+            <button type="submit" value="Entrar" id="Entrar" name="Entrar" style="width: 69px; height: 30px; font-size: 15px"></button>
           </div>
           </td>
       </tr>
@@ -123,6 +114,7 @@
                 </div>
             </td>
         </tr>
+        </form>
     </table>
     
 
